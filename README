@@ -1,0 +1,22 @@
+pyc2py
+======
+Pyc2py is a python decompiler: you can use it to retrieve the source code 
+when having the bytecode file (*.pyc).
+
+It is currently beta software and was only tested with python2.6 bytecode 
+files.
+
+Usage:
+./main.py <path_to_your_pyc_file> > output.py
+
+Important note
+==============
+In order to simplify its design, pyc2py uses python introspection features.
+Thanks to this, bytecode analysis is limited to function and class methods.
+As a consequence, the first step of the analysis is the import of the module 
+implemented in the *.pyc input file; if this module imports other modules, 
+these additional modules must be present in the "python path" (in either form,
+'.py' or '.pyc'), otherwise this preliminary import will fail.
+
+
+
